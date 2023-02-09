@@ -2,6 +2,8 @@
 
 ### VERSION 0.2
 
+### To run file place it inside of docker folder.
+
 ### Remove, Build Docker image & run 
 
 ## Removing docker image

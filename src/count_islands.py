@@ -1,11 +1,8 @@
+import sys
 
 class Solution:
-    def __init__(self, file_path, batch_size):
-        if batch_size is None:
-            self.grid_size = 500
-        else:
-            self.grid_size = batch_size
-
+    def __init__(self, file_path, batch_size=500):
+        self.grid_size = batch_size
         self.file_path = file_path
         self.loaded_grid = []
         self.is_ended = False
@@ -74,11 +71,16 @@ class Solution:
         except:
             self.is_ended = True
             
+    def get_islands(self):
+        try:
+            outcome = self.num_islands()
+            sys.stdout.write(str(outcome) + '\n')
+        except Exception as e:
+            sys.stderr.write(str(e) + '\n')
     
 def run_count_islands_script(file_path, batch_size):
     print(f"""
           Provided file_path is:
           {file_path} """)
     island_count = Solution(file_path, batch_size)
-    output = island_count.num_islands()
-    print(output)
+    island_count.get_islands()
