@@ -2,6 +2,8 @@
 
 ### VERSION 0.2
 
+### To run file place it inside of docker folder.
+Make sure that file is inside of dockerfile tests or src folder. It will be required to run script.
 ### Remove, Build Docker image & run 
 
 ## Removing docker image
